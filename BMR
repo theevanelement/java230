@@ -1,0 +1,36 @@
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p1_evan_lacy;
+import java.util.Scanner;
+/**
+ *
+ * @author elacy
+ */
+public class P1_Evan_Lacy {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("Type your name.");
+        System.out.println("Type your weight in lbs");
+        System.out.println("Type your Height in feet and inches");
+        System.out.println("Type your age");
+    
+        double personName;
+        int personWeight, personHeight, personAge;
+        int menBmr
+        Scanner keyboard = new Scanner(System.in);
+        personName = keyboard.nextInt();
+        personWeight = keyboard.nextInt();
+        personHeight = keyboard.nextInt();
+        personAge = keyboard.nextInt();
+        
+        
+        
+    }
+}

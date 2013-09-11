@@ -1,0 +1,40 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package programingdrill1_evan_lacy;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class ProgramingDrill1_Evan_Lacy {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        String firstName; 
+        double  test1, test2, test3, testAverages;
+        
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Please Enter Your first name:");
+        firstName = keyboard.next();
+        System.out.println("Please Enter Your score for Test 1:");
+        test1 = keyboard.nextInt();
+        System.out.println("Please Enter Your score for Test 2:");
+        test2 = keyboard.nextInt();
+       System.out.println("Please Enter Your score for Test 3:");
+        test3 = keyboard.nextInt();
+        
+        testAverages = (test1 + test2 + test3)/3;
+        System.out.println("Your test average is: " + testAverages + " percent");
+        // System.out.println(keyboard.nextLine());
+        
+        
+        
+    }
+}

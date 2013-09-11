@@ -1,4 +1,3 @@
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -23,13 +22,17 @@ public class P1_Evan_Lacy {
     
         double personName;
         int personWeight, personHeight, personAge;
-        int menBmr
+        double menBmr, womenBmr;
+        int chocolateBar;
         Scanner keyboard = new Scanner(System.in);
         personName = keyboard.nextInt();
         personWeight = keyboard.nextInt();
         personHeight = keyboard.nextInt();
         personAge = keyboard.nextInt();
         
+        menBmr = 66 + (6.3 * personWeight) + (12.9 * personHeight)-(6.8 * personAge);
+        womenBmr = 655 + (4.3 * personWeight) + (4.7 * personHeight)-(4.7 * personAge);
+        chocolateBar = 230;
         
         
     }

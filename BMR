@@ -1,39 +1,53 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package p1_evan_lacy;
-import java.util.Scanner;
 /**
- *
- * @author elacy
- */
-public class P1_Evan_Lacy {
+* Program Name: P1EvanLacy.java
+* Programming assignment 1 -- BMR Calculator
+* This program inputs persons name, age, weight, height (feet and inches)
+* and outputs men and women BMR with number of chocolate bars.
+*
+* @Author: Evan Lacy
+*
+* @Yen-Ting (Tony) Lee
+* @Professor Ching-seh (Mike) Wu
+*
+* @9/15/2013
+*/
+package p1evanlacy;
 
-    /**
-     * @param args the command line arguments
-     */
+import java.util.Scanner;
+
+public class P1EvanLacy {
+
     public static void main(String[] args) {
+        String personName;
+        int personWeight, personHeightFeet, personAge, personHeightInches;
+        double womenBmr, menBmr;
+        int chocolateBar, chocolateBarAmountMen, chocolateBarAmountWomen;
+        Scanner keyboard = new Scanner(System.in);
         // TODO code application logic here
         System.out.println("Type your name.");
+        personName = keyboard.nextLine();
         System.out.println("Type your weight in lbs");
-        System.out.println("Type your Height in feet and inches");
+         personWeight = keyboard.nextInt();
+        System.out.println("Type your Height(feet):");
+        personHeightFeet = keyboard.nextInt();
+        System.out.println("Type your Height(inches):");
+        personHeightInches = keyboard.nextInt()+ (personHeightFeet * 12);
+      
         System.out.println("Type your age");
-    
-        double personName;
-        int personWeight, personHeight, personAge;
-        double menBmr, womenBmr;
-        int chocolateBar;
-        Scanner keyboard = new Scanner(System.in);
-        personName = keyboard.nextInt();
-        personWeight = keyboard.nextInt();
-        personHeight = keyboard.nextInt();
         personAge = keyboard.nextInt();
         
-        menBmr = 66 + (6.3 * personWeight) + (12.9 * personHeight)-(6.8 * personAge);
-        womenBmr = 655 + (4.3 * personWeight) + (4.7 * personHeight)-(4.7 * personAge);
-        chocolateBar = 230;
         
+        menBmr = 66 + (6.3 * personWeight) + (12.9 * personHeightInches)-(6.8 * personAge);
+        womenBmr = 655 + (4.3 * personWeight) + (4.7 * personHeightInches)-(4.7 * personAge);
+        chocolateBar = 230;
+        chocolateBarAmountMen = (int) (menBmr/chocolateBar); 
+        chocolateBarAmountWomen = (int) (womenBmr/chocolateBar);
+        System.out.println("Your name: " + personName);
+        System.out.println("Your BMR for Women: " + womenBmr);
+         System.out.println ("Women's Chocolate bar Amount: "+chocolateBarAmountWomen);
+        System.out.println("Your BMR for Men: " + menBmr);
+        System.out.println ("Men's Chocolate bar Amount: "+chocolateBarAmountMen);
+        chocolateBarAmountWomen = (int) (womenBmr/chocolateBar);
         
     }
 }

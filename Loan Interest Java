@@ -16,7 +16,7 @@ public class P2EvanLacy {
     public static void main(String[] args) {
         
         // TODO code application logic here
-    double RATE = 4.49;
+    double RATE = 0.0449;
     int payment;
     Scanner keyboard = new Scanner(System.in);
     System.out.println("Enter this month's payment:(Whole dollars)");

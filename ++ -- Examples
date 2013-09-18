@@ -1,0 +1,29 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication6;
+
+/**
+ *
+ * @author elacy
+ */
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int a=1, b=1, c=1, d=1;
+        int a1, b1, c1, d1;
+        a1 = a++;
+        b1 = ++b;
+        c1= c--;
+        d1 = --d;
+        System.out.println("a1=" + a1 + "b1=" + b1);
+        System.out.println("a" + a + "b=" + b);
+System.out.println("c1=" + c + "d1=" + d1);
+System.out.println("c=" + c + "d1="+ d);
+    }
+}

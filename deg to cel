@@ -1,0 +1,101 @@
+
+
+import java.util.Scanner;
+
+public class DegreesToCelcious
+{
+	
+
+
+public static void main(String[] args)
+{
+Scanner input = new Scanner( System.in );
+double convert;
+String selection; //selection needs to be string variable for switch to work with letter characters
+double temp;
+double converts;
+
+
+do
+{
+
+
+System.out.println( "Main Menu" );
+System.out.println( "Enter C for Fahrenheit to Celsius" );
+System.out.println( "Enter F for Celsius to Fahrenheit" );
+System.out.println( "Q to Exit" );
+System.out.print( "Selection: " );
+selection = input.next().toUpperCase();// toUpperCase converts the users input to a capital letter
+
+
+//converts celsius degrees to fahrenheit degrees
+//converts fahrenheit degree to celsius degrees
+
+switch ( selection )
+{
+//User chooses C for converting to celsius.
+case "C":
+System.out.println("Enter fahrenheit temperature: " );
+temp = input.nextInt();
+convert = celsius( temp );
+System.out.printf("%f degrees F = %f degrees C\n",temp,convert );
+break;
+//User chooses F for converting to fahrenheit.
+case "F":
+System.out.println("Enter celsius temperature: " );
+temp = input.nextInt();
+converts = fahrenheit( temp );
+System.out.printf("%f degrees C = %f degrees F\n", temp, converts );
+break;
+//User chooses Q for exiting the program.
+case "Q":
+	System.exit(0);
+break;
+// If the user inputs any other keys that are not mentioned above, then an error message will occur.
+default:
+System.out.println( "Invalid selection" );
+
+
+
+} 
+// Selecting Q quits the program
+} while( selection !="Q");
+} 
+public static double fahrenheit(double celsius)
+{
+double fahrenheit;
+//Formula for converting to fahrenheit
+fahrenheit = (((celsius*9)/5)+32); 
+// this if statement tells the user how the temperature feels
+if (fahrenheit > 100)
+	System.out.println("Extremely Hot!");
+     else if ((fahrenheit > 90) && (fahrenheit<100))
+    	 
+System.out.println("Very Hot!");
+     else if ((fahrenheit > 80) && (fahrenheit< 90))
+    	 System.out.println("Hot!");
+     
+     else if ((fahrenheit > 70) && (fahrenheit < 80))
+    	 System.out.println("Comfortable!");
+     else if ((fahrenheit > 50) && (fahrenheit < 70))
+    	 System.out.println("Cool!");
+     else if ((fahrenheit > 30) && (fahrenheit < 50))
+    	 System.out.println("Cold!");
+     else if (fahrenheit < 30)
+    	 System.out.println("Very Cold!");       
+return fahrenheit;
+}
+//prints the finished conversion and how the temperature feels
+public static double celsius(double fahrenheit)
+{
+double celsius;
+// Formula for converting to celsius
+celsius =(((fahrenheit-32)*5)/9);
+
+
+//prints the finished conversion
+
+return celsius;
+}
+
+}

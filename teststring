@@ -1,0 +1,23 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author elacy
+ */
+public class TestString {
+    public static void main(String[] args){
+    String sentence = "Mike Wu is the most handsome boy in the world!";   
+    int position =  sentence.indexOf(" is");
+    System.out.println("The word \"Mike Wu\" starts at index " + position);
+    System.out.println("The sentance has a length of " + sentence.length());
+   sentence = "paul" + sentence.substring(position,46);
+   System.out.println(sentence);
+   sentence = sentence.toUpperCase();
+   System.out.println(sentence);
+    
+    }
+    
+}

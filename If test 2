@@ -1,0 +1,25 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iftesting;
+
+/**
+ *
+ * @author elacy
+ */
+public class Iftesting {
+
+    public static void main(String[] args) {
+       int boy = 18;
+       int girl = 28;
+      //%% can mean both
+       // || is or
+       if (boy >= 16 || girl <= 30){
+           System.out.println("You can enter the club!");
+       }
+       else {
+           System.out.println("You can not enter the club!");
+       
+    }
+    }}

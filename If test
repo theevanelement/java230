@@ -1,0 +1,30 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iftesting;
+
+/**
+ *
+ * @author elacy
+ */
+public class Iftesting {
+
+    public static void main(String[] args) {
+       int test = 10;
+       if (test == 10){
+           System.out.println("Yes");
+           //more calculations can go here
+           test = test+1;
+           //!= comparative not equal
+//== comparative equal
+//>= comparative greater than
+
+//<= comparative less than
+
+       } else {
+           System.out.println("No");
+           System.out.println("This is not a good number");
+       }
+    }
+}

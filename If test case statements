@@ -1,0 +1,40 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iftesting;
+
+/**
+ *
+ * @author elacy
+ */
+public class Iftesting {
+
+    public static void main(String[] args) {
+    int age = 3;
+    
+    switch(age){
+        case 1: 
+           System.out.println("You can crawl"); 
+            break;
+        case 2:
+            System.out.println("You can eat!");
+            break;
+        case 3:
+             System.out.println("You can get in trouble!");
+            break;
+        default:
+            System.out.println("I don't know your age!");
+            break;
+    }
+   // if(age == 1){
+    //    System.out.println("You can crawl");
+    //}
+    //if (age ==2){
+  //       System.out.println("You can eat!");
+    //}
+    //if (age ==3) {
+      //   System.out.println("You can get in trouble!");
+    //}
+    //}}
+    }}

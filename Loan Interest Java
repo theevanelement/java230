@@ -38,3 +38,30 @@ public class P2EvanLacy {
 
     }
 }
+
+
+Balance amount you owe
+
+monthlypayment
+
+rate/12 = monthlyrate(double)
+
+(output) Interest = balance * monthlyrate
+
+(output) principal = monthlypayment-interest
+
+(output)new balance = Balance - Principal
+
+(int)(balance * monthlyrate) mortgage1
+
+double a=2.43;
+double b=2.53;
+
+(int) a = 2
+
+(int) b =2
+
+(int)(a + 0.5) = 2
+
+
+youtube 

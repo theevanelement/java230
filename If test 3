@@ -1,0 +1,31 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iftesting;
+
+/**
+ *
+ * @author elacy
+ */
+public class Iftesting {
+
+    public static void main(String[] args) {
+       int score = 3;
+       
+      //%% can mean both
+       // || is or
+       if (score  == 90){
+           System.out.println("You are great!");
+       
+    }
+       else if (score >=80){
+           System.out.println("You are good");
+       }
+       else if(score >=70){
+        System.out.println("you are OK!");
+    }
+       else {
+           System.out.println("You are failed!");
+       }
+    }}

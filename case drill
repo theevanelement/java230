@@ -1,0 +1,52 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package iftesting;
+import java.util.Scanner;
+/**
+ *
+ * @author elacy
+ */
+public class Iftesting {
+
+    public static void main(String[] args) {
+        String studentName;
+        double midtermExam;
+        double finalExam;
+        double programmingAssaignments;
+        double programmingDrills;
+        double participation;
+        double score;
+        Scanner keyboard = new Scanner(System.in);
+        studentName = keyboard.nextLine();
+        midtermExam = keyboard.nextDouble();
+        finalExam = keyboard.nextDouble();
+        programmingAssaignments = keyboard.nextDouble();
+        programmingDrills = keyboard.nextDouble();
+        participation = keyboard.nextDouble();
+        
+        score = (midtermExam * 0.15) + (finalExam * 0.15) + (programmingAssaignments * 0.40) + (programmingDrills * 0.20) + (participation * 0.10);
+        
+     
+       
+      //%% can mean both
+       // || is or
+       if (score >= 95){
+           System.out.println("You are my hero!");
+       
+    }
+       else if (score >=90 && score <95){
+           System.out.println("You are excellent");
+       }
+      else if (score >=80 && score < 90){
+        System.out.println("you are good");
+    }
+      else if (score >=70 && score <80){
+          System.out.println("you are Ok");
+      }
+      else if (score < 70 ){
+          System.out.println("you are failed");
+      
+      }
+    }}

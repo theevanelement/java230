@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author elacy
+ */
+public class GradeTesting {
+   public static void main(String[] args){
+char grade;
+Scanner keyboard = new Scanner(System.in);
+System.out.println("Enter your grade");
+grade = keyboard.next().charAt(0);
+System.out.println("Your grade is " + grade);
+
+switch(grade){
+    case 'a':
+    case 'A':
+        System.out.println("You are my hero!");
+break;
+    case 'b':
+    case 'B':
+        System.out.println("You are doing great!");
+        break;
+    case 'c':
+    case 'C':
+        System.out.println("You are OK");
+        break;
+    default:
+        System.out.println("You got donut award");
+}
+   }
+}

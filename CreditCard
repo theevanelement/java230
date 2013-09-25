@@ -1,0 +1,29 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package creditcard;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class CreditCard {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner( System.in );
+        String cardNumber = keyboard.next();
+        CreditCard cc
+    }
+
+    private static isu.CreditCard checkCC(java.lang.String cardNumber) {
+        isu.ISUCreditCardVerifierService service = new isu.ISUCreditCardVerifierService();
+        isu.ISUCreditCardVerifier port = service.getISUCreditCardVerifierPort();
+        return port.checkCC(cardNumber);
+    }
+}

@@ -5,12 +5,13 @@
 package creditcard;
 
 import java.util.Scanner;
+import javax.smartcardio.Card;
 
 /**
  *
  * @author elacy
  */
-public class CreditCard {
+public class CreditCardjava {
 
     /**
      * @param args the command line arguments
@@ -18,7 +19,15 @@ public class CreditCard {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner( System.in );
         String cardNumber = keyboard.next();
-        CreditCard cc
+       int  cc;
+        isu.CreditCard cc = checkCC(cardNumber);
+                if(cc.isCardValid()){ System.out.println();cc.getCardType());
+                if(cc.isCardValid() == false)
+                    
+System.out.println(”Card is not valid. Please enter a valid number”);
+else
+                    
+ System.out.println(”Card is valid. Type: ” + result.getCardType());
     }
 
     private static isu.CreditCard checkCC(java.lang.String cardNumber) {

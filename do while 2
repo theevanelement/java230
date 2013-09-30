@@ -1,0 +1,31 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package looptest;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class LoopTest {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int counter = 11;
+        Scanner keyboard = new Scanner(System.in);
+        double score = 0.0;
+        do{
+           System.out.println("Please enter a list of scores, enter a negative number to stop: ");
+           score = keyboard.nextDouble();
+        
+        }while(score >=0);
+            
+        }
+       
+}
+

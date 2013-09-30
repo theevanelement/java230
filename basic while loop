@@ -1,0 +1,25 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package looptest;
+
+/**
+ *
+ * @author elacy
+ */
+public class LoopTest {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int counter = 0;
+        while(counter <= 10){
+            System.out.println(counter);
+        counter++;
+            
+        }
+        
+    }
+}

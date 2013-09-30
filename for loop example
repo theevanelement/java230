@@ -1,0 +1,28 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package looptest;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class LoopTest {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //Scanner keyboard = new Scanner(System.in);
+        //double counter = 0.0;
+        
+        for(int counter = 0; counter <=10;counter++){
+         System.out.println(counter);
+   }}
+       
+}
+

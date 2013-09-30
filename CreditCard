@@ -11,23 +11,35 @@ import javax.smartcardio.Card;
  *
  * @author elacy
  */
-public class CreditCardjava {
+public class CreditCard {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Scanner keyboard = new Scanner( System.in );
+        System.out.println("Type In your Credit Card Number to Check it");
         String cardNumber = keyboard.next();
-       int  cc;
+        //int  cc;
         isu.CreditCard cc = checkCC(cardNumber);
-                if(cc.isCardValid()){ System.out.println();cc.getCardType());
-                if(cc.isCardValid() == false)
-                    
-System.out.println(”Card is not valid. Please enter a valid number”);
-else
-                    
- System.out.println(”Card is valid. Type: ” + result.getCardType());
+        
+        
+        if(cc.isCardValid())
+        { 
+            System.out.println(cc.getCardType());
+        
+        }
+        if(cc.isCardValid() == false)
+        {
+            System.out.println("Card is not valid. Please enter a valid number");
+        }
+           else
+        {
+           System.out.println("Card is valid. Type:"  + result.getCardType());
+       
+        }
+
+           
     }
 
     private static isu.CreditCard checkCC(java.lang.String cardNumber) {

@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class LoopTest
+{
+public static void main(String[] args)
+{
+
+int numberOFGrades = 0;
+
+double grade=1;
+int A=0, B=0,C=0,D=0,F=0;
+
+Scanner keyboard = new Scanner(System.in);
+
+while (grade<=100 && grade >= 0)
+{
+
+System.out.println("Please write your grades ");
+grade = keyboard.nextInt(); 
+
+if(grade>=90 && grade < 100)
+{
+
+A++;    
+
+}
+
+else if(grade>=80 && grade < 90)
+{
+
+B++;     
+}
+else if(grade>=70 && grade < 80)
+{
+
+C++;    
+
+}
+else if(grade>=60 && grade < 70)
+{
+
+D++;     
+}
+else if(grade>=0 && grade <= 59)
+{
+
+F++;
+
+}
+
+if (grade >0)
+{
+numberOFGrades++; 
+
+}
+
+}
+
+
+
+System.out.println();
+System.out.println("Total of grades entered was " + numberOFGrades);
+System.out.println();
+System.out.println("Total of A's = " +A);
+System.out.println("Total of B's = " +B);
+System.out.println("Total of C's = " +C);
+System.out.println("Total of D's = " +D);
+System.out.println("Total of F's = " +F);
+
+
+
+
+
+
+
+
+
+
+
+}
+}

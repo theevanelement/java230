@@ -40,6 +40,7 @@ public class Weather {
         City2 = keyboard.nextLine().toUpperCase();
         System.out.println ("Please enter your Second zipcode");
         zipCode2 = keyboard.nextLine();
+        System.out.println ("Please enter your Third city");
         City3 = keyboard.nextLine().toUpperCase();
         System.out.println ("Please enter your Third zipcode");
         zipCode3 = keyboard.nextLine();
@@ -48,9 +49,10 @@ public class Weather {
         System.out.println("EVAN'S WEATHER FORECAST FOR: SUNDAY, OCTOBER 07, 2013");
         System.out.println("------------------------------------------------------");
         System.out.println("City   Zip   Code    Temp   Relative   Humidity");
-        System.out.println(City1 + zipCode1 + port.getCityWeatherByZIP(zipCode1).getTemperature());
-        System.out.println(City2 + zipCode2 + port.getCityWeatherByZIP(zipCode2).getTemperature());
-        System.out.println(City3 + zipCode3 + port.getCityWeatherByZIP(zipCode2).getTemperature());
+        System.out.println(City1 +"   "+ zipCode1 + port.getCityWeatherByZIP(zipCode1).getTemperature() + port.getCityWeatherByZIP(zipCode1).getRelativeHumidity());
+        System.out.println(City2 +"   "+ zipCode2 + port.getCityWeatherByZIP(zipCode2).getTemperature() + port.getCityWeatherByZIP(zipCode2).getRelativeHumidity());
+        System.out.println(City3 +"   "+ zipCode1 + port.getCityWeatherByZIP(zipCode3).getTemperature() + port.getCityWeatherByZIP(zipCode3).getRelativeHumidity());
+        
       } catch (Exception ex) {
     }
 

@@ -1,0 +1,27 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package printftest;
+
+/**
+ *
+ * @author elacy
+ */
+public class PrintfTest {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    System.out.printf("Four numbers: %d %(d %+d %05d\n", 3, -3, 3, 3);
+    System.out.printf("Floating point number format: %S\n", "Mike WU"); //string format Uppercase
+    System.out.printf("Floating point number format: %s\n", "Mike WU"); //string format
+    System.out.printf("Floating point number format: %f\n", 12345.12345);
+    System.out.printf("Floating point number format: %e\n", 12345.12345);
+    System.out.printf("Floating point number with commas: %,f\n", 12345678945.123);
+    System.out.printf("Floating point number with commas: %.2f\n", 12345.126); //rounds up the second place after decimal
+    System.out.printf("the %s jumped over the %s, %d times\n","cow","moon", 2);
+    }
+}

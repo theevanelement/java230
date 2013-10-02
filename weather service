@@ -1,0 +1,74 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package weather;
+
+import com.cdyne.ws.weatherws.ArrayOfWeatherDescription;
+import com.cdyne.ws.weatherws.WeatherReturn;
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class Weather {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      try {
+                   
+        
+        String zipCode1;
+        String zipCode2;
+        String zipCode3;
+        Scanner keyboard = new Scanner(System.in);
+        String City1;
+        String City2;
+        String City3;
+        
+        com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
+        com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
+        
+        System.out.println ("Please enter your First city");
+        City1 = keyboard.nextLine().toUpperCase();
+        System.out.println ("Please enter your First zipcode");
+        zipCode1 = keyboard.nextLine();
+        System.out.println ("Please enter your Second city");
+        City2 = keyboard.nextLine().toUpperCase();
+        System.out.println ("Please enter your Second zipcode");
+        zipCode2 = keyboard.nextLine();
+        City3 = keyboard.nextLine().toUpperCase();
+        System.out.println ("Please enter your Third zipcode");
+        zipCode3 = keyboard.nextLine();
+        
+        System.out.println("------------------------------------------------------");
+        System.out.println("EVAN'S WEATHER FORECAST FOR: SUNDAY, OCTOBER 07, 2013");
+        System.out.println("------------------------------------------------------");
+        System.out.println("City   Zip   Code    Temp   Relative   Humidity");
+        System.out.println(City1 + zipCode1 + port.getCityWeatherByZIP(zipCode1).getTemperature());
+        System.out.println(City2 + zipCode2 + port.getCityWeatherByZIP(zipCode2).getTemperature());
+        System.out.println(City3 + zipCode3 + port.getCityWeatherByZIP(zipCode2).getTemperature());
+      } catch (Exception ex) {
+    }
+
+}
+    
+    private static WeatherReturn getCityWeatherByZIP(java.lang.String zip) {
+        com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
+        com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
+        return port.getCityWeatherByZIP(zip);
+    }
+
+    
+
+   
+
+   
+
+   
+  
+    
+}

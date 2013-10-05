@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @author elacy
  */
 public class Weather {
+    private static String nextZip;
 
     /**
      * @param args the command line arguments
@@ -21,43 +22,38 @@ public class Weather {
       try {
                    
         
-        String zipCode1;
-        String zipCode2;
-        String zipCode3;
+      
         Scanner keyboard = new Scanner(System.in);
-        String City1;
-        String City2;
-        String City3;
-        int average;
+        
         
         com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
         com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
         
-        System.out.println ("Please enter your First city");
-        City1 = keyboard.nextLine().toUpperCase();
-        System.out.println ("Please enter your First zipcode");
-        zipCode1 = keyboard.nextLine();
-        System.out.println ("Please enter your Second city");
-        City2 = keyboard.nextLine().toUpperCase();
-        System.out.println ("Please enter your Second zipcode");
-        zipCode2 = keyboard.nextLine();
-        System.out.println ("Please enter your Third city");
-        City3 = keyboard.nextLine().toUpperCase();
-        System.out.println ("Please enter your Third zipcode");
-        zipCode3 = keyboard.nextLine();
         
-        System.out.println("------------------------------------------------------");
-        System.out.println("EVAN'S WEATHER FORECAST FOR: SUNDAY, OCTOBER 07, 2013");
-        System.out.println("------------------------------------------------------");
-        System.out.println("City   ZipCode    Temp   Relative   Humidity");
-        System.out.println(City1 +"   "+ zipCode1+"         " + port.getCityWeatherByZIP(zipCode1).getTemperature()+"   " + port.getCityWeatherByZIP(zipCode1).getRelativeHumidity());
-        System.out.println(City2 +"   "+ zipCode2+"         " + port.getCityWeatherByZIP(zipCode2).getTemperature()+"   " + port.getCityWeatherByZIP(zipCode2).getRelativeHumidity());
-        System.out.println(City3 +"   "+ zipCode1+"         " + port.getCityWeatherByZIP(zipCode3).getTemperature()+"   " + port.getCityWeatherByZIP(zipCode3).getRelativeHumidity());
-        
-      } catch (Exception ex) {
-    }
+        String[] cities = new String[3];
+        String[] zipCodes = new String[3];
 
-}
+       for (int i = 0; i < 3; i++) {
+       System.out.println ("Please enter your City No." + (i + 1) + ":");
+       cities[i] = keyboard.nextLine().toUpperCase();
+       System.out.println ("Please enter your Zipcode No." + (i + 1) + ":");
+       zipCodes[i] = keyboard.nextLine();
+       }
+
+       System.out.println("------------------------------------------------------");
+       System.out.println("EVAN'S WEATHER FORECAST FOR: SUNDAY, OCTOBER 07, 2013");
+       System.out.println("------------------------------------------------------");
+       System.out.println("City   Zip   Code    Temp   Relative   Humidity");
+
+       for (int i = 0; i < 3; i++) {
+       System.out.println(cities[i] +"  " + zipCodes[i] +"   "+ 
+       port.getCityWeatherByZIP(zipCodes[i]).getTemperature() + "   "+
+       port.getCityWeatherByZIP(zipCodes[i]).getRelativeHumidity());
+       }
+        
+       } catch (Exception ex) {
+       }
+       }
     
     private static WeatherReturn getCityWeatherByZIP(java.lang.String zip) {
         com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();

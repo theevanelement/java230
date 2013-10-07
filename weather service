@@ -59,15 +59,4 @@ public class Weather {
         com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
         com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
         return port.getCityWeatherByZIP(zip);
-    }
-
-    
-
-   
-
-   
-
-   
-  
-    
-}
+    }}

@@ -1,0 +1,44 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package courseregistration;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class CourseRegistration {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Professor mikeWu = new Professor();
+        Student paul = new Student();
+        Course cit230 = new Course();
+        
+        //cit230.courseName = "Java";
+        //cit230.creditHours = 4;
+        
+        
+        cit230.printInfo();
+        
+        //System.out.println("The name of the course is: " + cit230.courseName);
+       //System.out.println("The hours of the course is: " + cit230.creditHours);
+        //Scanner input = new Scanner(System.in);
+        //System.out.println("Enter your name:");
+        //String name = input.nextLine();
+        
+        //paul.setName(name);
+        //paul.getName();
+        //paul.saying();
+        
+        
+        
+        
+    }
+}

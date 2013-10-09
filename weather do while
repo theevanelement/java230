@@ -1,0 +1,74 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package weather;
+
+import com.cdyne.ws.weatherws.ArrayOfWeatherDescription;
+import com.cdyne.ws.weatherws.WeatherReturn;
+import java.util.Scanner;
+
+/**
+ *
+ * @author elacy
+ */
+public class Weather {
+    private static String nextZip;
+    private static double numberOfCites;
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+        
+        com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
+        com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
+        
+        
+       String cities;
+       String zipCodes;
+       double totalTemp = 0;
+       double AverageTemp;
+       double averageHum;
+       double numberOfCities =0;
+       
+       
+       try {
+       
+            System.out.println ("Enter Number of Cities");
+            numberOfCities = keyboard.nextDouble();  
+            for (int i = 0; i < numberOfCities; i++) {
+            int count = 0;
+       
+            System.out.println ("Please enter your City No." + (i + 1) + ":");
+            cities = keyboard.next().toUpperCase();
+            count++;
+            System.out.println ("Please enter your Zipcode No." + (i + 1) + ":");
+            zipCodes = keyboard.next();
+            
+             System.out.println("------------------------------------------------------");
+             System.out.println("EVAN'S WEATHER FORECAST FOR: SUNDAY, OCTOBER 07, 2013");
+             System.out.println("------------------------------------------------------");
+             System.out.println("City          ZipCode    Temp   Relative   Humidity");
+             System.out.println("------------------------------------------------------");
+            
+           
+            System.out.println(cities +"  " + zipCodes +"   "+ 
+            port.getCityWeatherByZIP(zipCodes).getTemperature() + "   "+
+            port.getCityWeatherByZIP(zipCodes).getRelativeHumidity());
+            
+            totalTemp = totalTemp + Integer.parseInt(port.getCityWeatherByZIP(zipCodes).getTemperature());
+       
+           AverageTemp = ((totalTemp/numberOfCites));
+       
+       }} catch (Exception ex) {
+        }
+       }
+    
+    
+        private static WeatherReturn getCityWeatherByZIP(java.lang.String zip) {
+        com.cdyne.ws.weatherws.Weather service = new com.cdyne.ws.weatherws.Weather();
+        com.cdyne.ws.weatherws.WeatherSoap port = service.getWeatherSoap();
+        return port.getCityWeatherByZIP(zip);
+    }}

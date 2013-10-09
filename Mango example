@@ -1,0 +1,26 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author elacy
+ */
+public class Mango {
+    private String girlName;
+    
+    public Mango(String name){
+        girlName = name;
+
+    }
+    public void setName(String name){
+        girlName = name;
+    }
+    
+    public String getName(){
+        return girlName;
+}
+    public void saying(){
+            System.out.printf("Your first girl friend was %s\n", getName());
+}}

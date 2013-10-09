@@ -1,0 +1,33 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+/**
+ *
+ * @author elacy
+ */
+public class clock2 {
+
+    private int hours = 1;
+    private int minutes = 2;
+    private int second = 3;
+   
+    public void setTime(int hour, int minute, int second){
+        this.hours = 13;
+        this.minutes = 14;
+        this.second = 15;
+        
+    }
+    public String toMilitary(){
+        return String.format("%02d:%02d: %02d", hours,minutes, second);
+   }
+
+
+   public String toString(){
+           return String.format("%02d:%02d:%02d %s", ((hours==0 || hours==12)?12:hours%12),minutes, second,(hours <12?"AM":"PM"));
+           
+  }
+}
+

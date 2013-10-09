@@ -1,0 +1,17 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author elacy
+ */
+public class ClockDriver {
+    public static void main (String[] args){
+       clock2 clockObject = new clock2();
+       
+       System.out.println(clockObject.toMilitary());
+       System.out.println(clockObject.toString());
+    }
+}

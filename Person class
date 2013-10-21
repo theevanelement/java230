@@ -1,0 +1,78 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+/**
+ *
+ * @author elacy
+ */
+
+
+public class Person
+{   private String Name;
+    private String person;
+    private int age;
+    
+    public Person()
+    {
+        person="No name yet";
+        age=0;
+    }
+    public Person(String s,int a)
+    {
+        person=s;
+        age=a;
+    }
+    public static Person createAdult()
+    {
+        Person adult = new Person("An Adult",21);
+       
+        return adult;
+    }
+    public static Person createToddler()
+    {
+        Person toddler= new Person("A Toddler",2);
+       
+        return toddler;
+    }
+    public static Person createPreschooler()
+    {
+        Person preschooler = new Person ("A Preschooler",5);
+      
+        return preschooler;
+    }
+    public static Person createAdolescent()
+    {
+        Person Adolescent = new Person ("An Adolescent", 9);
+        
+        return Adolescent;
+    }
+    public static Person createTeenager()
+    {
+        Person Teenager = new Person ("A Teenager", 15);
+        
+        return Teenager;
+    }
+public String getName (){
+ 
+    return person;
+            }
+    public int getAge (){
+ 
+    return age;
+    
+    }
+    public void SetName (String aname){
+        person=aname;
+    }
+    public void SetAge(int aage){
+        age=aage;
+    }
+    
+    public int randomPick(){
+        int randomPick = (int)(Math.random()*5);
+    return randomPick;
+}
+}

@@ -1,0 +1,93 @@
+/**
+* Program Name: Company1.java - Class file 
+* Programming assignment 5 -- Company Stock quote
+* This program connects to a web service to check the current stock information 
+* for Google and Apple. This portion is the Class file.
+*
+* @Author: Evan Lacy
+*
+* @Yen-Ting (Tony) Lee
+* @Professor Ching-seh (Mike) Wu
+*
+* @10/16/2013
+*/
+//Imports the Scanner class.
+import java.util.Scanner;
+
+//Class variables set to private.
+public class Company1{
+    private String companyName;
+    private String companySymbol;
+    private String companyQuote;
+    private String quoteDate; 
+    private String result;
+    
+   
+    // Company method
+    Company1(String name, String Symbol)
+    {
+        companyName = name;
+        companySymbol = Symbol;
+        companyQuote = "0";
+        quoteDate = null;
+    }
+    //blank Company method
+    Company1()
+    {
+
+    }
+    //readCompany method. Takes the information from user.
+    public void readCompany()
+    {
+      Scanner keyboard = new Scanner(System.in);
+        System.out.print("Please enter a new company name: ");
+        companyName = keyboard.nextLine();
+        System.out.print("Please enter the symbol: ");
+        companySymbol = keyboard.nextLine();  
+        
+    }
+    //Displays the stock information to the user.
+    public void printCompany()
+    { 
+        
+        //converts the input to uppercase and prints output
+        System.out.println(companyName.toUpperCase()+
+         "'s current stock price is $"+companyQuote+" for "+quoteDate+"\n");
+        
+    }
+    
+    public void currentQuote()
+    {
+        System.out.println("\nStock information for: "+
+        companyName+"(" + companySymbol.toUpperCase() + ")");
+        net.webservicex.StockQuote service = new net.webservicex.StockQuote();
+        net.webservicex.StockQuoteSoap port = service.getStockQuoteSoap();
+        result= port.getQuote(companySymbol);
+        //Gets the specific part of the WSDL file in the substring
+        companyQuote=result.substring(47, 53);
+        quoteDate=result.substring(66, 75);
+    }
+    //gets the company name with a return
+    public String getCompanyName()
+    {
+        return companyName;
+    }
+    //gets the company symbol with a return
+    public String getCompanySymbol()
+    {
+        return companySymbol;
+    }
+    //gets the company quote with a return
+    public String getCompanyQuote()
+    {
+        return companyQuote;
+    }
+    //gets the company date with a return
+    public String getCompanyDate()
+    {
+        return quoteDate; 
+    }
+
+ 
+}
+

@@ -1,0 +1,33 @@
+import javax.swing.JApplet;
+import java.awt.*;
+import java.awt.Graphics;
+
+public class PD7 extends JApplet {
+    public void paint(Graphics canvas){
+        
+    setSize(300,300);
+    canvas.setColor(Color.BLACK);
+    
+    canvas.fillRect(0,0,300,300);
+    
+    canvas.setColor(Color.WHITE);
+    canvas.fillOval(140,17,50,50);
+    
+     canvas.setColor(Color.GREEN);
+    canvas.fillRect(40, 90, 250, 20);
+    
+    canvas.setColor(Color.GREEN);
+    canvas.fillRect(120, 170,20 , 250);
+    
+    canvas.setColor(Color.GREEN);
+    canvas.fillRect(185, 170,20 , 250);
+    
+    canvas.setColor(Color.RED);
+    canvas.fillRect(120, 65, 90, 120);
+    
+   
+      
+              
+    
+}
+}

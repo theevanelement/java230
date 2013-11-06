@@ -1,0 +1,40 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package programmingdrill8;
+
+import javax.swing.JOptionPane;
+
+public class ProgrammingDrill8 {
+
+    public static void main(String[] args) {
+      
+       String studentName;
+       // String[] classArray;
+       // double[] scoreArray;
+       String[][] StudentArray=new String[5][2]; 
+       String name = "";
+        
+        double sum =0;
+        
+        
+        studentName = JOptionPane.showInputDialog("Please enter your name:");
+        
+        
+        for(int a = 0; a<5; a++) {
+       StudentArray[a][0] = JOptionPane.showInputDialog("Please enter your class name:");
+        
+        StudentArray[a][1] = JOptionPane.showInputDialog("Please enter your class score:");
+       
+        sum = sum+ Double.parseDouble(StudentArray[a][1]);
+        }
+        
+        
+        double average =sum/5;
+        for (int a =0 ; a< 5; a++) {
+        JOptionPane.showMessageDialog(null, StudentArray [a][0] + " | " + StudentArray[a][1]);
+    }
+        JOptionPane.showMessageDialog (null, "Your Average is " + average);
+}
+}

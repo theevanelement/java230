@@ -1,0 +1,130 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pa7;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JApplet;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author elacy
+ */
+public class PA7 extends JApplet implements ActionListener {
+    
+    private JButton butSort = new JButton("Sort Scores");
+    private JButton butAvg = new JButton("calculate Average");
+    
+   private JButton butExit = new JButton ("Exit");
+   
+   int nNumofStudent = 3;
+   int nNumOfCourse = 3;
+   
+   private String[] arraStudentName = new String[nNumofStudent];
+   private String [] arraCourseName = new String[nNumOfCourse];
+   
+   private double[][] arraScore = new double[nNumofStudent][nNumOfCourse];
+   
+   private String studentArray[][];
+   private double sum = 0;
+   private double average = 0;
+   
+   
+    @Override
+   public void init()
+   {
+       Container containPane = this.getContentPane();
+       //containPane.setBackground(color.WHITE);
+       containPane.setLayout(new FlowLayout());
+       
+       containPane.add(butSort);
+       butSort.addActionListener(this);
+       butSort.setVisible(true);
+       
+       containPane.add(butAvg);
+        butAvg.addActionListener(this);
+        butAvg.setVisible(true);
+        
+        containPane.add(butAvg);
+        butAvg.addActionListener(this);
+        
+        containPane.add(butExit);
+        butExit.addActionListener (this);
+        butExit.setVisible(true);
+        getInfo(arraStudentName, arraCourseName, arraScore);
+        showInfo(arraStudentName, arraCourseName, arraScore);
+   }
+   
+   
+   @Override
+   public void actionPerformed(ActionEvent e){
+       throw new UnsupportedOperationException ("Not supported yet. ");
+       
+   }
+   
+   public static void getInfo (String[] arraSName, String[] arraCName,
+           double [][] arraScores)
+           
+   {
+   
+       
+       for(int i = 0; i<arraSName.length; i++)
+       {
+           arraSName[i] = JOptionPane.showInputDialog("Enter #" + (i+1) + "Student's name");
+                   }
+                   
+       
+   
+  for(int i = 0; i<arraCName.length; i++){
+    
+    arraCName[i] = JOptionPane.showInputDialog("Enter #" + (i+1) + "Course name:");
+}
+  
+    for(int i = 0; i<arraSName.length; i++){
+
+    for(int j = 0; j<arraCName.length; j++){
+        {
+                    arraScores[i][j]= Double.parseDouble(JOptionPane.showInputDialog("enter the score of #" + i + "student in #" + j + "course"));
+        }
+                  JOptionPane.showInputDialog("Enter the score of #" +i + "studnet in #" + j + "course.");
+    }
+}
+   }
+
+
+public static void showInfo(String[] arraSName, String[] arraCName, double[][]arraScores)
+{
+String strMessage = "";
+
+strMessage = "The score board\n";
+
+
+//course name
+strMessage = strMessage + "  " ;
+
+for(int i=0; i<arraCName.length; i++)
+{
+strMessage = strMessage + arraCName[i] + "  ";
+}
+
+strMessage = strMessage + "\n" ;
+
+for(int i=0; i<arraSName.length; i++)
+{
+    //put students name
+for ( int j = 0; j<arraScores[i].length; j++){
+strMessage = strMessage + arraScores[i][j] + "  ";
+
+}
+strMessage = strMessage + "\n";
+}
+
+JOptionPane.showMessageDialog(null,strMessage);
+
+}}
